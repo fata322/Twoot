@@ -59,3 +59,10 @@ class _CreateTwootState extends State<CreateTwoot> {
           automaticallyImplyLeading: false,
           elevation: 0,
           backgroundColor: Color(0xff000000),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              RichText(
+                  text: TextSpan(
+                      text: 'Cancel',
+                      style: TextStyle(fontWeight: FontWeight.w600,color: Color(0xff08a0e9)),
