@@ -194,7 +194,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             context,
             MaterialPageRoute(builder: (context) => CreateTwoot()),
           );
-        
+        },
+        child: Icon(Icons.auto_awesome, color: Color(0xffECDBBA)),
+        backgroundColor: Color(0xff08A0E9),
+        elevation: 3,
+      ),
+      
+}
           // insert floating action button here 
       
   
