@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:twoot/screens/create_twoot.dart';
@@ -154,8 +155,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                       textAlign: TextAlign.left),
                                 ),
                               ),
-                            ),
-                            
+                            )
+
                             // ignore: prefer_const_literals_to_create_immutables
                             ),
                       );
@@ -163,7 +164,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ),
       ),
-     bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
           showSelectedLabels: false,
           showUnselectedLabels: false,
           backgroundColor: Colors.black,
@@ -187,4 +188,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               title: Text(""),
             ),
           ]),
+          // insert floating action button here 
       
+  
+
