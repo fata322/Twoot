@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -124,6 +125,23 @@ class LoginScreen extends StatelessWidget {
                           ],
                         ),
                       )),
+                      // Snackbar showing error 
+                      Container(
+                        width: 140,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              if (formGlobalKey.currentState!.validate()) {
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Dashboard()),
+                                );
+                              } else {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                        content: Text('Invalid Credentials')));
+                              }
+                            },
                             child: Text(
                               'Log In',
                               style: TextStyle(
