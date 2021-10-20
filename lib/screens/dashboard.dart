@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:twoot/recorder/twoots.dart';
 import 'package:twoot/screens/create_twoot.dart';
-import 'package:twoot/models/twoots.dart';
 import 'package:intl/intl.dart';
 
 final String transactionDate = DateFormat("MM-dd-yy").format(DateTime.now());
