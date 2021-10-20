@@ -1,5 +1,3 @@
-import 'dart:math';
-
 class TwootRecorder {
   String twoot;
 
@@ -9,3 +7,4 @@ class TwootRecorder {
 }
 
 List<TwootRecorder> userTwoots = [];
+
