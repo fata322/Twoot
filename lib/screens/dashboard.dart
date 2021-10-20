@@ -154,8 +154,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                       textAlign: TextAlign.left),
                                 ),
                               ),
-                            )
-
+                            ),
+                            
                             // ignore: prefer_const_literals_to_create_immutables
                             ),
                       );
@@ -163,5 +163,28 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ),
       ),
-     
+     bottomNavigationBar: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          backgroundColor: Colors.black,
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(
+              icon: Image.asset("assets/images/home.png"),
+              // ignore: deprecated_member_use
+              title: Text(""),
+            ),
+            BottomNavigationBarItem(
+              icon: Image.asset("assets/images/search.png"),
+              title: Text(""),
+            ),
+            BottomNavigationBarItem(
+              icon: Image.asset("assets/images/notif.png"),
+              title: Text(""),
+            ),
+            BottomNavigationBarItem(
+              icon: Image.asset("assets/images/messages.png"),
+              title: Text(""),
+            ),
+          ]),
       
