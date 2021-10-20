@@ -66,3 +66,8 @@ class _CreateTwootState extends State<CreateTwoot> {
                   text: TextSpan(
                       text: 'Cancel',
                       style: TextStyle(fontWeight: FontWeight.w600,color: Color(0xff08a0e9)),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () => Navigator.pop(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Dashboard())))),
