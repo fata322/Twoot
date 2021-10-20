@@ -1,8 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:twoot/recorder/twoots.dart';
 import 'package:twoot/screens/dashboard.dart';
-import 'package:twoot/models/twoots.dart';
+
 
 final twootText = TextEditingController();
 void clearText() {
@@ -71,3 +72,16 @@ class _CreateTwootState extends State<CreateTwoot> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => Dashboard())))),
+              ElevatedButton(
+                onPressed: () {
+                  userTwoots.add(
+                      // ignore: unnecessary_new
+                      new TwootRecorder(twoot: twootText.text));
+                  Navigator.pop(context,
+                      MaterialPageRoute(builder: (context) => Dashboard()));
+                  setState(() {
+                    twootText.clear();
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(SnackBar(content: Text('Twooted Successfully')));
+                  });
+                },
