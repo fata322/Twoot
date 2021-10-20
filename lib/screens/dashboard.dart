@@ -58,8 +58,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               child: Image.asset('assets/images/sparkle.png'),
             ),
             onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Dashboard()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => Dashboard()));
             },
           )
         ],
@@ -199,13 +199,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         backgroundColor: Color(0xff08A0E9),
         elevation: 3,
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.endDocked,
       backgroundColor: Color(0xff000000),
       extendBody: true,
     );
   }
 }
-          // insert floating action button here 
-      
-  
-

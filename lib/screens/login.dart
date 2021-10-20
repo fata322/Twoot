@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +27,8 @@ class LoginScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   SizedBox(
-                    width: MediaQuery.of(context).size.width / 18,
-                    height: MediaQuery.of(context).size.height / 30,
+                    width: MediaQuery.of(context).size.width / 20,
+                    height: MediaQuery.of(context).size.height / 20,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +44,7 @@ class LoginScreen extends StatelessWidget {
                       Text(
                         "Happening\nNow!\nJoin Twoot today ",
                         style:
-                            TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold,
+                            TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold,
                             ),
                             
                       )
@@ -58,7 +59,7 @@ class LoginScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           TextFormField(
-                            
+                            validator: (value) => value == "admin" ? null : '',
                             style: TextStyle(
                                 color: Color(0xffECDBBA),
                                 fontWeight: FontWeight.w100),
@@ -81,7 +82,7 @@ class LoginScreen extends StatelessWidget {
                             height: MediaQuery.of(context).size.height / 80,
                           ),
                           TextFormField(
-                            
+                            validator: (value) => value == "admin" ? null : '',
                             style: TextStyle(
                                 color: Color(0xffECDBBA),
                                 fontWeight: FontWeight.w100),
@@ -125,7 +126,6 @@ class LoginScreen extends StatelessWidget {
                           ],
                         ),
                       )),
-                      // Snackbar showing error 
                       Container(
                         width: 140,
                         child: ElevatedButton(
